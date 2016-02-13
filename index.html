@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="buttonplaceholder">
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
+<script type="text/babel">
+    var buttonStyle = {
+        background: 'pink'
+    };
+    var onClick = function(){}
+    var PinkButton = React.createClass({
+        onClick: function(e){
+            alert("Don't ever use this in production code or I'll slap you")
+        },
+        render: function(){
+
+
+            return (
+                    <button style={buttonStyle} onClick={this.onClick}>Click Me!</button>
+            );
+        }
+    });
+
+    ReactDOM.render(<PinkButton/>, document.getElementById('buttonplaceholder'));
+
+</script>
+</body>
+</html>
